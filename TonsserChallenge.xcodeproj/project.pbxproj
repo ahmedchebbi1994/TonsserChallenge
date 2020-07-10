@@ -136,8 +136,8 @@
 		AFA76E5724AE167B007E208E /* TonsserChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				0666D9F024B8940A00EE047A /* Networks */,
 				AFA76E7A24AE1708007E208E /* Base */,
+				0666D9F024B8940A00EE047A /* Networks */,
 				AFA76E8224AF1370007E208E /* Inspiration */,
 				AFA76E5824AE167B007E208E /* AppDelegate.swift */,
 				AFA76E5A24AE167B007E208E /* SceneDelegate.swift */,

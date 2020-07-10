@@ -17,8 +17,13 @@ class HomeViewController: BindableViewController<HomeView, HomeViewModel> {
         // View Model's properties are accessible like: viewModel.title
         // View's properties are also accessible like: layout.titleLabel
         // ....
-        ManagerService().fetchFellowers().subscribe(onNext: { (response) in
-            print(response.response?.count)
-            }).disposed(by: disposeBag)
+        ManagerService().fetchFollowers().subscribe(onNext: { (response) in
+            print("page1")
+            print(response.response?.count ?? 0)
+            ManagerService().fetchFollowers(nextPage: response.response?.last?.slug ?? "").subscribe(onNext: { (response) in
+                print("page2")
+                print(response.response?.count ?? 0)
+            }).disposed(by: self.disposeBag)
+        }).disposed(by: disposeBag)
     }
 }

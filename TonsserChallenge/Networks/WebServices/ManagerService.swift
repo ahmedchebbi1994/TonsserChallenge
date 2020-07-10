@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 public protocol FollowersServiceProtocol {
-    func fetchFellowers() -> Observable<ResponseFollowers>
+    func fetchFollowers(nextPage: String) -> Observable<ResponseFollowers>
 }
 
 public class ManagerService: ApiService, FollowersServiceProtocol {
@@ -19,10 +19,16 @@ public class ManagerService: ApiService, FollowersServiceProtocol {
         super.init()
     }
     
-    public func fetchFellowers() -> Observable<ResponseFollowers>{
+    public func fetchFollowers(nextPage: String = "") -> Observable<ResponseFollowers>{
         
         return Observable.create { (observer) -> Disposable in
-            let request = self.configureRequest(url: URL(string: "\(ApiService.Path.BaseUrl.path.rawValue)/\(ApiService.Path.BaseUrl.subPath.rawValue)")!, requestType: .get)
+            var urlStr: String = ""
+            if nextPage.isEmpty {
+                urlStr = "\(ApiService.Path.BaseUrl.path.rawValue)/\(ApiService.Path.BaseUrl.subPath.rawValue)"
+            } else {
+                urlStr = "\(ApiService.Path.BaseUrl.path.rawValue)/\(ApiService.Path.BaseUrl.subPath.rawValue)?\(ApiService.Path.params.currentFollowSlug.rawValue)=\(nextPage)"
+            }
+            let request = self.configureRequest(url: URL(string: urlStr)!, requestType: .get)
             
             let task = URLSession.shared.dataTask(with: request) { data, response , error in
                 if let httpResponse = response as? HTTPURLResponse {

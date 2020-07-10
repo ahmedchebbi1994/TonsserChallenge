@@ -136,7 +136,7 @@ struct Team: Codable {
 struct League: Codable {
     let name, slug: String?
     let id: Int?
-    let level: Int?
+    let level: String?
     let leaguePlayerCount: Int?
 
     enum CodingKeys: String, CodingKey {
