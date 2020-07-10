@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0666D9F224B8941C00EE047A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9F124B8941C00EE047A /* ApiService.swift */; };
+		0666D9F424B894A500EE047A /* ManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9F324B894A500EE047A /* ManagerService.swift */; };
+		0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9F724B894FF00EE047A /* ResponseFollowers.swift */; };
+		0666D9FB24B8955600EE047A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FA24B8955600EE047A /* Follower.swift */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0666D9F124B8941C00EE047A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		0666D9F324B894A500EE047A /* ManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerService.swift; sourceTree = "<group>"; };
+		0666D9F724B894FF00EE047A /* ResponseFollowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFollowers.swift; sourceTree = "<group>"; };
+		0666D9FA24B8955600EE047A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +80,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0666D9F024B8940A00EE047A /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				0666D9F924B8953600EE047A /* Models */,
+				0666D9F624B894D700EE047A /* Responses */,
+				0666D9F524B894BE00EE047A /* WebServices */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		0666D9F524B894BE00EE047A /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				0666D9F124B8941C00EE047A /* ApiService.swift */,
+				0666D9F324B894A500EE047A /* ManagerService.swift */,
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
+		0666D9F624B894D700EE047A /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				0666D9F724B894FF00EE047A /* ResponseFollowers.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		0666D9F924B8953600EE047A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0666D9FA24B8955600EE047A /* Follower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AFA76E4C24AE167B007E208E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +136,7 @@
 		AFA76E5724AE167B007E208E /* TonsserChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0666D9F024B8940A00EE047A /* Networks */,
 				AFA76E7A24AE1708007E208E /* Base */,
 				AFA76E8224AF1370007E208E /* Inspiration */,
 				AFA76E5824AE167B007E208E /* AppDelegate.swift */,
@@ -247,9 +291,13 @@
 				AFA76E8424AF138E007E208E /* HomeViewModel.swift in Sources */,
 				AFA76E8824AF13B1007E208E /* HomeViewController.swift in Sources */,
 				AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */,
+				0666D9F424B894A500EE047A /* ManagerService.swift in Sources */,
 				AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */,
+				0666D9FB24B8955600EE047A /* Follower.swift in Sources */,
+				0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */,
 				AFA76E7C24AE1749007E208E /* BindableViewController.swift in Sources */,
 				AFA76E8124AE1822007E208E /* ReusableUIView.swift in Sources */,
+				0666D9F224B8941C00EE047A /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

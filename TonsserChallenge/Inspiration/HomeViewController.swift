@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import RxSwift
 class HomeViewController: BindableViewController<HomeView, HomeViewModel> {
     
     // MARK: - Bind View Model
@@ -17,5 +17,8 @@ class HomeViewController: BindableViewController<HomeView, HomeViewModel> {
         // View Model's properties are accessible like: viewModel.title
         // View's properties are also accessible like: layout.titleLabel
         // ....
+        ManagerService().fetchFellowers().subscribe(onNext: { (response) in
+            print(response.response?.count)
+            }).disposed(by: disposeBag)
     }
 }
