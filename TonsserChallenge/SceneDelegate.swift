@@ -18,13 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         if let windowScene = scene as? UIWindowScene {
-            let homeViewModel = HomeViewModel()
-            var homeViewController = HomeViewController()
-            homeViewController.bind(toViewModel: homeViewModel)
+//            let homeViewModel = HomeViewModel()
+//            var homeViewController = HomeViewController()
+//            homeViewController.bind(toViewModel: homeViewModel)
+            let followersViewModel = ListFollowersViewModel()
+            var vc = ListFollowersViewController()
+            vc.bind(toViewModel: followersViewModel)
             
             let window = UIWindow(windowScene: windowScene)
             window.overrideUserInterfaceStyle = .light
-            window.rootViewController = UINavigationController(rootViewController: homeViewController)
+            window.rootViewController = UINavigationController(rootViewController: vc)
             
             self.window = window
             window.makeKeyAndVisible()

@@ -16,7 +16,6 @@ class HomeView: ReusableUIView {
     
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hello World !"
         label.textAlignment = .center
         return label
     }()

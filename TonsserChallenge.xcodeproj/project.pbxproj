@@ -11,6 +11,10 @@
 		0666D9F424B894A500EE047A /* ManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9F324B894A500EE047A /* ManagerService.swift */; };
 		0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9F724B894FF00EE047A /* ResponseFollowers.swift */; };
 		0666D9FB24B8955600EE047A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FA24B8955600EE047A /* Follower.swift */; };
+		0666D9FE24B8AF6F00EE047A /* ListFollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */; };
+		0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */; };
+		0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */; };
+		0666DA0724B8BC7B00EE047A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0666DA0624B8BC7B00EE047A /* RxCocoa */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -42,6 +46,9 @@
 		0666D9F324B894A500EE047A /* ManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerService.swift; sourceTree = "<group>"; };
 		0666D9F724B894FF00EE047A /* ResponseFollowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFollowers.swift; sourceTree = "<group>"; };
 		0666D9FA24B8955600EE047A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowerView.swift; sourceTree = "<group>"; };
+		0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewModel.swift; sourceTree = "<group>"; };
+		0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewController.swift; sourceTree = "<group>"; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0666DA0724B8BC7B00EE047A /* RxCocoa in Frameworks */,
 				AFA76E8D24AF17F9007E208E /* RxSwift in Frameworks */,
 				AFA76E8B24AF17F9007E208E /* RxRelay in Frameworks */,
 			);
@@ -115,12 +123,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0666D9FC24B8AF4100EE047A /* ListFollowersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */,
+				0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */,
+				0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */,
+			);
+			path = ListFollowersScreen;
+			sourceTree = "<group>";
+		};
+		0666DA0524B8BC7B00EE047A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AFA76E4C24AE167B007E208E = {
 			isa = PBXGroup;
 			children = (
 				AFA76E5724AE167B007E208E /* TonsserChallenge */,
 				AFA76E6E24AE167C007E208E /* TonsserChallengeUITests */,
 				AFA76E5624AE167B007E208E /* Products */,
+				0666DA0524B8BC7B00EE047A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +162,7 @@
 		AFA76E5724AE167B007E208E /* TonsserChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0666D9FC24B8AF4100EE047A /* ListFollowersScreen */,
 				AFA76E7A24AE1708007E208E /* Base */,
 				0666D9F024B8940A00EE047A /* Networks */,
 				AFA76E8224AF1370007E208E /* Inspiration */,
@@ -197,6 +224,7 @@
 			packageProductDependencies = (
 				AFA76E8A24AF17F9007E208E /* RxRelay */,
 				AFA76E8C24AF17F9007E208E /* RxSwift */,
+				0666DA0624B8BC7B00EE047A /* RxCocoa */,
 			);
 			productName = TonsserChallenge;
 			productReference = AFA76E5524AE167B007E208E /* TonsserChallenge.app */;
@@ -291,10 +319,13 @@
 				AFA76E8424AF138E007E208E /* HomeViewModel.swift in Sources */,
 				AFA76E8824AF13B1007E208E /* HomeViewController.swift in Sources */,
 				AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */,
+				0666D9FE24B8AF6F00EE047A /* ListFollowerView.swift in Sources */,
 				0666D9F424B894A500EE047A /* ManagerService.swift in Sources */,
 				AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */,
 				0666D9FB24B8955600EE047A /* Follower.swift in Sources */,
 				0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */,
+				0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */,
+				0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */,
 				AFA76E7C24AE1749007E208E /* BindableViewController.swift in Sources */,
 				AFA76E8124AE1822007E208E /* ReusableUIView.swift in Sources */,
 				0666D9F224B8941C00EE047A /* ApiService.swift in Sources */,
@@ -464,6 +495,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tonsser.tonsser.TonsserChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -482,6 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tonsser.tonsser.TonsserChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,6 +606,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0666DA0624B8BC7B00EE047A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFA76E8924AF17F9007E208E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
 		AFA76E8A24AF17F9007E208E /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFA76E8924AF17F9007E208E /* XCRemoteSwiftPackageReference "RxSwift" */;

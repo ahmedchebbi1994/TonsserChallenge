@@ -21,11 +21,15 @@ class ReusableUIView: UIView {
     
     private func internalInit() {
         self.styleUI()
+        self.setupUI()
         self.makeConstraints()
+        self.configUI()
         self.makeBindings()
     }
     
     func styleUI() {} // Setting up view specific properties 
     func makeConstraints() {} // Define auto-layout constraints
     func makeBindings() {} // Any view specifix Rx bindings
+    func setupUI() {} // Add views to superView
+    func configUI() {} // Config UI with Specific properties
 }
