@@ -84,7 +84,7 @@ extension UIStackView {
         subView.clipsToBounds = true
         
         subView.layer.masksToBounds = false
-        subView.layer.shadowRadius = 1
+        subView.layer.shadowRadius = 2
         subView.layer.shadowOpacity = 1
         subView.layer.shadowColor = UIColor.gray.cgColor
         subView.layer.shadowOffset = CGSize(width: 0 , height:1)

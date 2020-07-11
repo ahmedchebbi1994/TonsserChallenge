@@ -22,6 +22,7 @@
 		0666DA1F24B9436000EE047A /* DetailFollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1E24B9436000EE047A /* DetailFollowerView.swift */; };
 		0666DA2124B945CA00EE047A /* DetailFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA2024B945CA00EE047A /* DetailFollowerViewController.swift */; };
 		0666DA2324BA43CC00EE047A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA2224BA43CC00EE047A /* PaddingLabel.swift */; };
+		0666DA2524BA72D600EE047A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA2424BA72D600EE047A /* Constant.swift */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		0666DA1E24B9436000EE047A /* DetailFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFollowerView.swift; sourceTree = "<group>"; };
 		0666DA2024B945CA00EE047A /* DetailFollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFollowerViewController.swift; sourceTree = "<group>"; };
 		0666DA2224BA43CC00EE047A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		0666DA2424BA72D600EE047A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				0666DA1224B8F21600EE047A /* Utils.swift */,
 				0666DA2224BA43CC00EE047A /* PaddingLabel.swift */,
+				0666DA2424BA72D600EE047A /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				0666DA2124B945CA00EE047A /* DetailFollowerViewController.swift in Sources */,
 				AFA76E7C24AE1749007E208E /* BindableViewController.swift in Sources */,
 				AFA76E8124AE1822007E208E /* ReusableUIView.swift in Sources */,
+				0666DA2524BA72D600EE047A /* Constant.swift in Sources */,
 				0666DA1824B9291000EE047A /* FollowerViewModel.swift in Sources */,
 				0666D9F224B8941C00EE047A /* ApiService.swift in Sources */,
 			);

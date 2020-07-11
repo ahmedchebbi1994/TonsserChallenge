@@ -71,6 +71,7 @@ class DetailFollowerView: ReusableUIView {
         img.contentMode = .scaleAspectFill
         img.image = #imageLiteral(resourceName: "placeholder")
         img.clipsToBounds = true
+        img.layer.cornerRadius = 5
         return img
     }()
     
@@ -78,7 +79,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 14, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 20)
-        st.textColor = .lightGray
+        st.textColor = UIColor(named: Constant.Colors.colorLabelTitle)
         st.text = "Club :"
         return st
     }()
@@ -125,7 +126,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 5, 0, 14, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 20)
-        st.textColor = .lightGray
+        st.textColor = UIColor(named: Constant.Colors.colorLabelTitle)
         st.text = "Team :"
         st.numberOfLines = 2
         return st
@@ -135,7 +136,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "Tunisie"
         st.numberOfLines = 2
         return st
@@ -145,7 +146,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "League :"
         st.numberOfLines = 2
         return st
@@ -156,7 +157,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "Number player League : "
         st.numberOfLines = 2
         return st
@@ -166,7 +167,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "Level : "
         st.numberOfLines = 2
         return st
@@ -176,7 +177,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "Season Start : "
         st.numberOfLines = 2
         return st
@@ -186,7 +187,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 10, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.textColor = .black
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         st.text = "Season End : "
         st.numberOfLines = 2
         return st
@@ -195,8 +196,6 @@ class DetailFollowerView: ReusableUIView {
     private lazy var viewTeam: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        //view.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
         return view
     }()
     
@@ -218,7 +217,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 14, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 20)
-        st.textColor = .lightGray
+        st.textColor = UIColor(named: Constant.Colors.colorLabelTitle)
         st.text = "Position :"
         return st
     }()
@@ -242,7 +241,6 @@ class DetailFollowerView: ReusableUIView {
     private lazy var viewPosition: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -254,9 +252,6 @@ class DetailFollowerView: ReusableUIView {
         st.spacing = 10
         return st
     }()
-    
-    // MARK: - IBOutlet Position
-    
     
     // MARK: - IBOutlet
     
@@ -281,7 +276,7 @@ class DetailFollowerView: ReusableUIView {
     
     // MARK: - Styling
     override func styleUI() {
-        backgroundColor = .white
+        backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
     }
     
     // MARK: - Constraints
@@ -388,10 +383,10 @@ class DetailFollowerView: ReusableUIView {
     // MARK: - configUI
     override func configUI() {
         
-        self.stackViewPosition.customize(backgroundColor: .white, radiusSize: 5)
-        self.stackViewTeam.customize(backgroundColor: .white, radiusSize: 5)
-        self.stackViewClub.customize(backgroundColor: .white, radiusSize: 5)
-        self.stackViewHeader.customize(backgroundColor: .white, radiusSize: 5)
+        self.stackViewPosition.customize(backgroundColor: UIColor(named: Constant.Colors.backgroundMainView)!, radiusSize: 5)
+        self.stackViewTeam.customize(backgroundColor: UIColor(named: Constant.Colors.backgroundMainView)!, radiusSize: 5)
+        self.stackViewClub.customize(backgroundColor: UIColor(named: Constant.Colors.backgroundMainView)!, radiusSize: 5)
+        self.stackViewHeader.customize(backgroundColor: UIColor(named: Constant.Colors.backgroundMainView)!, radiusSize: 5)
         
     }
     

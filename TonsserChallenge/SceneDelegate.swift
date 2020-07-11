@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             vc.bind(toViewModel: followersViewModel)
             
             let window = UIWindow(windowScene: windowScene)
-            window.overrideUserInterfaceStyle = .light
             window.rootViewController = UINavigationController(rootViewController: vc)
             
             self.window = window

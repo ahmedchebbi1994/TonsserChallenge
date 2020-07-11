@@ -21,6 +21,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         let st = UILabel()
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 17)
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         return st
     }()
     
@@ -36,6 +37,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         img.contentMode = .scaleToFill
         img.image = #imageLiteral(resourceName: "placeholder")
         img.clipsToBounds = true
+        img.layer.cornerRadius = 5
         return img
     }()
     
@@ -52,6 +54,7 @@ class ListFollowersTableViewCell: UITableViewCell {
     private lazy var teamNameTxt: UILabel = {
         let st = UILabel()
         st.translatesAutoresizingMaskIntoConstraints = false
+        st.textColor = UIColor(named: Constant.Colors.colorLabel)
         return st
     }()
     
@@ -87,7 +90,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         st.distribution = .fill
         st.translatesAutoresizingMaskIntoConstraints = false
         st.spacing = 15
-        st.customize(backgroundColor: .white, radiusSize: 10)
+        st.customize(backgroundColor: UIColor(named: Constant.Colors.backgroundMainView)!, radiusSize: 10)
         return st
     }()
     
@@ -127,7 +130,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         
         self.contentView.addSubview(stackViewMainView)
         
-        self.contentView.backgroundColor = .white
+        self.contentView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)!
         
     }
     

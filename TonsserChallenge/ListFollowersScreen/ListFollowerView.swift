@@ -18,13 +18,13 @@ class ListFollowerView: ReusableUIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)!
         return tableView
     }()
     
     // MARK: - Styling
     override func styleUI() {
-        backgroundColor = .white
+        backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
     }
     
     // MARK: - Constraints
