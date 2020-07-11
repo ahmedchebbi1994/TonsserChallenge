@@ -87,7 +87,7 @@ class DetailFollowerView: ReusableUIView {
         let st = PaddingLabel(withInsets: 0, 0, 14, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
         st.font = UIFont.boldSystemFont(ofSize: 15)
-        st.text = "HELLO"
+        st.numberOfLines = 2
         return st
     }()
     
@@ -116,7 +116,7 @@ class DetailFollowerView: ReusableUIView {
         
         return view
     }()
-
+    
     
     // MARK: - IBOutlet Team
     
@@ -127,6 +127,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 20)
         st.textColor = .lightGray
         st.text = "Team :"
+        st.numberOfLines = 2
         return st
     }()
     
@@ -136,6 +137,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "Tunisie"
+        st.numberOfLines = 2
         return st
     }()
     
@@ -145,6 +147,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "League :"
+        st.numberOfLines = 2
         return st
     }()
     
@@ -155,6 +158,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "Number player League : "
+        st.numberOfLines = 2
         return st
     }()
     
@@ -164,6 +168,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "Level : "
+        st.numberOfLines = 2
         return st
     }()
     
@@ -173,6 +178,7 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "Season Start : "
+        st.numberOfLines = 2
         return st
     }()
     
@@ -182,14 +188,15 @@ class DetailFollowerView: ReusableUIView {
         st.font = UIFont.boldSystemFont(ofSize: 15)
         st.textColor = .black
         st.text = "Season End : "
+        st.numberOfLines = 2
         return st
     }()
     
     private lazy var viewTeam: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: 200).isActive = true
-
+        //view.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
         return view
     }()
     
@@ -206,7 +213,7 @@ class DetailFollowerView: ReusableUIView {
     
     
     // MARK: - IBOutlet Position
- 
+    
     private(set) lazy var positionTitleTxt: UILabel = {
         let st = PaddingLabel(withInsets: 0, 0, 14, 0)
         st.translatesAutoresizingMaskIntoConstraints = false
@@ -218,9 +225,9 @@ class DetailFollowerView: ReusableUIView {
     
     private lazy var positionImageView: UIView = {
         let view = UIView()
-          view.translatesAutoresizingMaskIntoConstraints = false
-          view.heightAnchor.constraint(equalToConstant: 250).isActive = true
-          return view
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        return view
     }()
     
     private(set) lazy var positionImage: UIImageView = {
@@ -240,16 +247,16 @@ class DetailFollowerView: ReusableUIView {
     }()
     
     private lazy var stackViewPosition: UIStackView = {
-           let st = UIStackView()
-           st.axis = .vertical
-           st.distribution = .fill
-           st.translatesAutoresizingMaskIntoConstraints = false
-           st.spacing = 10
-           return st
-       }()
+        let st = UIStackView()
+        st.axis = .vertical
+        st.distribution = .fill
+        st.translatesAutoresizingMaskIntoConstraints = false
+        st.spacing = 10
+        return st
+    }()
     
     // MARK: - IBOutlet Position
-
+    
     
     // MARK: - IBOutlet
     
@@ -264,7 +271,6 @@ class DetailFollowerView: ReusableUIView {
     private lazy var scrollViewMainView: UIScrollView = {
         let st = UIScrollView()
         st.translatesAutoresizingMaskIntoConstraints = false
-        
         return st
     }()
     
@@ -275,7 +281,7 @@ class DetailFollowerView: ReusableUIView {
     
     // MARK: - Styling
     override func styleUI() {
-        backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
+        backgroundColor = .white
     }
     
     // MARK: - Constraints
@@ -285,19 +291,19 @@ class DetailFollowerView: ReusableUIView {
         positionImage.leadingAnchor.constraint(equalTo: positionImageView.leadingAnchor,constant: 5).isActive = true
         positionImage.trailingAnchor.constraint(equalTo: positionImageView.trailingAnchor,constant: -5).isActive = true
         positionImage.bottomAnchor.constraint(equalTo: positionImageView.bottomAnchor,constant: -5).isActive = true
-
+        
         //Position
         stackViewPosition.topAnchor.constraint(equalTo: viewPosition.topAnchor, constant: 10).isActive = true
         stackViewPosition.leadingAnchor.constraint(equalTo: viewPosition.leadingAnchor, constant: 10).isActive = true
         stackViewPosition.trailingAnchor.constraint(equalTo: viewPosition.trailingAnchor, constant: -10).isActive = true
         stackViewPosition.bottomAnchor.constraint(equalTo: viewPosition.bottomAnchor, constant: -10).isActive = true
-
+        
         //Team
         stackViewTeam.topAnchor.constraint(equalTo: viewTeam.topAnchor, constant: 10).isActive = true
         stackViewTeam.leadingAnchor.constraint(equalTo: viewTeam.leadingAnchor, constant: 10).isActive = true
         stackViewTeam.trailingAnchor.constraint(equalTo: viewTeam.trailingAnchor, constant: -10).isActive = true
         stackViewTeam.bottomAnchor.constraint(equalTo: viewTeam.bottomAnchor, constant: -10).isActive = true
-
+        
         //Club
         stackViewClub.topAnchor.constraint(equalTo: viewClub.topAnchor, constant: 10).isActive = true
         stackViewClub.leadingAnchor.constraint(equalTo: viewClub.leadingAnchor, constant: 10).isActive = true
@@ -309,7 +315,7 @@ class DetailFollowerView: ReusableUIView {
         stackViewHeader.leadingAnchor.constraint(equalTo: viewHeader.leadingAnchor, constant: 10).isActive = true
         stackViewHeader.trailingAnchor.constraint(equalTo: viewHeader.trailingAnchor, constant: -10).isActive = true
         stackViewHeader.bottomAnchor.constraint(equalTo: viewHeader.bottomAnchor, constant: -10).isActive = true
-
+        
         scrollViewMainView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         scrollViewMainView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         scrollViewMainView.topAnchor.constraint(equalTo: topAnchor).isActive = true

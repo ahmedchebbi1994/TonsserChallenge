@@ -12,19 +12,19 @@ class ListFollowerView: ReusableUIView {
     
     // MARK: - Properties
     private let padding: CGFloat = 16
-
+    
     // MARK: - IBOutlet
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
+        tableView.backgroundColor = .white
         return tableView
     }()
     
     // MARK: - Styling
     override func styleUI() {
-        backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
+        backgroundColor = .white
     }
     
     // MARK: - Constraints

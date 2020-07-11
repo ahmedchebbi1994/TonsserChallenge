@@ -76,7 +76,7 @@ class DetailFollowerViewController: BindableViewController<DetailFollowerView, F
             self.layout.endSeasonTxt.isHidden = true
         }
         
-        self.layout.positionTitleTxt.text = "\(self.layout.positionTitleTxt.text ?? "") \(self.viewModel.displayTxtPositionName)"
+        self.layout.positionTitleTxt.text = "\(self.layout.positionTitleTxt.text ?? "") \(self.viewModel.displayTxtPositionName.uppercased())"
         
         if !self.viewModel.displayTxtPositionCode.isEmpty {
             if let img = UIImage(named: "position_\(self.viewModel.displayTxtPositionCode)") {

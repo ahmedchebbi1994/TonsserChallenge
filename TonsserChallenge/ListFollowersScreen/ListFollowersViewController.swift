@@ -14,7 +14,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
     
     private let followersBehaviorRelay = BehaviorRelay<[FollowerViewModel]>(value: [])
     private var refresh: Bool = true
-
+    
     // MARK: - Bind View Model
     
     func bindViewModel() { // Here we glue the view model and the view together
@@ -25,7 +25,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
         
         //Init title UIViewController
         self.title = "Followers"
- 
+        
         
         //Observer Display data
         followersBehaviorRelay.observeOn(MainScheduler.instance).bind(to: layout.tableView.rx.items(cellIdentifier: ListFollowersTableViewCell.identifier, cellType: ListFollowersTableViewCell.self)) { index, data, myCell in
@@ -33,7 +33,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
         }.disposed(by: disposeBag)
         
         //Observer in the bottom list
-         
+        
         layout.tableView.rx.contentOffset.observeOn(MainScheduler.instance).subscribe {
             if let element = $0.element {
                 
@@ -51,7 +51,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
                         data.append(contentsOf: followers)
                         self.followersBehaviorRelay.accept(data)
                         self.stopIndicatingActivity()
-
+                        
                     }).disposed(by: self.disposeBag)
                 }
             }
@@ -59,16 +59,16 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
         
         
         layout.tableView.rx.itemSelected.observeOn(MainScheduler.instance)
-        .subscribe(onNext: { [weak self] indexPath in
-            
-            let vm = self?.followersBehaviorRelay.value[indexPath.row]
-            var vc = DetailFollowerViewController()
-            if let vm = vm {
-                vc.bind(toViewModel: vm)
-                self?.navigationController?.pushViewController(vc, animated: true)
-            }
-            
-        }).disposed(by: self.disposeBag)
+            .subscribe(onNext: { [weak self] indexPath in
+                
+                let vm = self?.followersBehaviorRelay.value[indexPath.row]
+                var vc = DetailFollowerViewController()
+                if let vm = vm {
+                    vc.bind(toViewModel: vm)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+                
+            }).disposed(by: self.disposeBag)
         
     }
 }

@@ -16,9 +16,7 @@ class ListFollowersTableViewCell: UITableViewCell {
     let disposeBag = DisposeBag()
     private var animator: UIViewPropertyAnimator?
     
-    // MARK: - IBOutlet
-    
-    
+    // MARK: - IBOutlet    
     private lazy var nameTxt: UILabel = {
         let st = UILabel()
         st.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +52,6 @@ class ListFollowersTableViewCell: UITableViewCell {
     private lazy var teamNameTxt: UILabel = {
         let st = UILabel()
         st.translatesAutoresizingMaskIntoConstraints = false
-        
         return st
     }()
     
@@ -64,7 +61,6 @@ class ListFollowersTableViewCell: UITableViewCell {
         st.distribution = .fillEqually
         st.translatesAutoresizingMaskIntoConstraints = false
         st.spacing = 5
-        
         return st
     }()
     
@@ -92,23 +88,19 @@ class ListFollowersTableViewCell: UITableViewCell {
         st.translatesAutoresizingMaskIntoConstraints = false
         st.spacing = 15
         st.customize(backgroundColor: .white, radiusSize: 10)
-        
         return st
     }()
-    
     
     // MARK: - Init constructor
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
         setupConstraints()
-        
     }
     
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
         self.profileIcon.addCircleGradiendBorder(4)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -133,13 +125,9 @@ class ListFollowersTableViewCell: UITableViewCell {
         self.stackViewMainView.addArrangedSubview(profileIconView)
         self.stackViewMainView.addArrangedSubview(stackViewDescription)
         
-        
         self.contentView.addSubview(stackViewMainView)
         
-        
-        
-        
-        self.contentView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
+        self.contentView.backgroundColor = .white
         
     }
     
@@ -156,12 +144,10 @@ class ListFollowersTableViewCell: UITableViewCell {
         teamIcon.trailingAnchor.constraint(equalTo: teamIconView.trailingAnchor,constant: -2).isActive = true
         teamIcon.bottomAnchor.constraint(equalTo: teamIconView.bottomAnchor,constant: -2).isActive = true
         
-        
         profileIcon.topAnchor.constraint(equalTo: profileIconView.topAnchor,constant: 5).isActive = true
         profileIcon.leadingAnchor.constraint(equalTo: profileIconView.leadingAnchor,constant: 5).isActive = true
         profileIcon.trailingAnchor.constraint(equalTo: profileIconView.trailingAnchor,constant: -5).isActive = true
         profileIcon.bottomAnchor.constraint(equalTo: profileIconView.bottomAnchor,constant: -5).isActive = true
-        
         
         stackViewMainView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 10).isActive = true
         stackViewMainView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10).isActive = true

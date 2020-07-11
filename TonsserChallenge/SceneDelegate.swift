@@ -18,9 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         if let windowScene = scene as? UIWindowScene {
-//            let homeViewModel = HomeViewModel()
-//            var homeViewController = HomeViewController()
-//            homeViewController.bind(toViewModel: homeViewModel)
             let followersViewModel = ListFollowersViewModel()
             var vc = ListFollowersViewController()
             vc.bind(toViewModel: followersViewModel)

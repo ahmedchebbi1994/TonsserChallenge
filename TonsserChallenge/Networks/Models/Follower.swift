@@ -31,7 +31,7 @@ struct Follower: Codable {
     let primaryPosition: PrimaryPosition?
     let club: Club?
     let team: Team?
-
+    
     enum CodingKeys: String, CodingKey {
         case slug, name, firstname, lastname
         case facebookID = "facebook_id"
@@ -64,7 +64,7 @@ struct Follower: Codable {
 struct Club: Codable {
     let slug, name: String?
     let logoURL: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case slug, name
         case logoURL = "logo_url"
@@ -85,7 +85,7 @@ struct PrimaryPosition: Codable {
     let coordinates: Coordinates?
     let positionGroupID: Int?
     let localizedName, localizedAbbreviation: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id, abbreviation, name, order, group, coordinates
         case positionGroupID = "position_group_id"
@@ -98,7 +98,7 @@ struct PrimaryPosition: Codable {
 struct Coordinates: Codable {
     let x, y: Double?
 }
- 
+
 // MARK: - Team
 struct Team: Codable {
     let id: Int?
@@ -113,7 +113,7 @@ struct Team: Codable {
     let playersCount, numberOfCoaches: Int?
     let league: League?
     let club: Club?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case clubName = "club_name"
@@ -138,7 +138,7 @@ struct League: Codable {
     let id: Int?
     let level: String?
     let leaguePlayerCount: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case name, slug, id, level
         case leaguePlayerCount = "league_player_count"

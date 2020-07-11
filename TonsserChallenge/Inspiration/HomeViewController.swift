@@ -18,6 +18,6 @@ class HomeViewController: BindableViewController<HomeView, HomeViewModel> {
         // View's properties are also accessible like: layout.titleLabel
         // ....
         layout.titleLabel.text = viewModel.title
-    
+        
     }
 }

@@ -10,11 +10,11 @@ import Foundation
 import RxSwift
 import RxRelay
 struct ListFollowersViewModel {
-
+    
     private let followersService : FollowersServiceProtocol
     private let resultsSubject = BehaviorRelay<[FollowerViewModel]>(value: [])
     let followers : PublishSubject<[Follower]> = PublishSubject()
-
+    
     
     init(followersService: FollowersServiceProtocol = ManagerService()) {
         self.followersService = followersService

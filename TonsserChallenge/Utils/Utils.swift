@@ -45,33 +45,33 @@ class MTAPIClient {
     }
 }
 extension UIImageView {
-
+    
     func addCircleGradiendBorder(_ width: CGFloat) {
-           let gradient = CAGradientLayer()
-           gradient.frame =  CGRect(origin: CGPoint.zero, size: bounds.size)
-           let colors: [CGColor] = [UIColor(red:87.0/255, green:206.0/255, blue: 172.0/255, alpha:0.71).cgColor,UIColor(red:44.0/255, green:192.0/255, blue:208.0/255, alpha:1.0).cgColor]
-           gradient.colors = colors
-           gradient.startPoint = CGPoint(x: 1, y: 0.5)
-           gradient.endPoint = CGPoint(x: 0, y: 0.5)
-           
-           let cornerRadius = frame.size.width / 2
-           layer.cornerRadius = cornerRadius
-           clipsToBounds = true
-           
-           let shape = CAShapeLayer()
-           let path = UIBezierPath(ovalIn: bounds)
-           
-           shape.lineWidth = width
-           shape.path = path.cgPath
-           shape.strokeColor = UIColor.black.cgColor
-           shape.fillColor = UIColor.clear.cgColor // clear
-           gradient.mask = shape
-           
-           layer.insertSublayer(gradient, below: layer)
-       }
-       
+        let gradient = CAGradientLayer()
+        gradient.frame =  CGRect(origin: CGPoint.zero, size: bounds.size)
+        let colors: [CGColor] = [UIColor(red:87.0/255, green:206.0/255, blue: 172.0/255, alpha:0.71).cgColor,UIColor(red:44.0/255, green:192.0/255, blue:208.0/255, alpha:1.0).cgColor]
+        gradient.colors = colors
+        gradient.startPoint = CGPoint(x: 1, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0, y: 0.5)
+        
+        let cornerRadius = frame.size.width / 2
+        layer.cornerRadius = cornerRadius
+        clipsToBounds = true
+        
+        let shape = CAShapeLayer()
+        let path = UIBezierPath(ovalIn: bounds)
+        
+        shape.lineWidth = width
+        shape.path = path.cgPath
+        shape.strokeColor = UIColor.black.cgColor
+        shape.fillColor = UIColor.clear.cgColor // clear
+        gradient.mask = shape
+        
+        layer.insertSublayer(gradient, below: layer)
+    }
+    
 }
- 
+
 extension UIStackView {
     func customize(backgroundColor: UIColor = .clear, radiusSize: CGFloat = 0) {
         let subView = UIView(frame: bounds)

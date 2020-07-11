@@ -15,7 +15,6 @@
 		0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */; };
 		0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */; };
 		0666DA0724B8BC7B00EE047A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0666DA0624B8BC7B00EE047A /* RxCocoa */; };
-		0666DA0C24B8D89900EE047A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA0B24B8D89900EE047A /* Constant.swift */; };
 		0666DA0E24B8EF4500EE047A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666DA0D24B8EF4500EE047A /* Media.xcassets */; };
 		0666DA1124B8EFEA00EE047A /* ListFollowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */; };
 		0666DA1324B8F21600EE047A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1224B8F21600EE047A /* Utils.swift */; };
@@ -57,7 +56,6 @@
 		0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowerView.swift; sourceTree = "<group>"; };
 		0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewModel.swift; sourceTree = "<group>"; };
 		0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewController.swift; sourceTree = "<group>"; };
-		0666DA0B24B8D89900EE047A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0666DA0D24B8EF4500EE047A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersTableViewCell.swift; sourceTree = "<group>"; };
 		0666DA1224B8F21600EE047A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		0666DA0A24B8D88B00EE047A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				0666DA0B24B8D89900EE047A /* Constant.swift */,
 				0666DA1224B8F21600EE047A /* Utils.swift */,
 				0666DA2224BA43CC00EE047A /* PaddingLabel.swift */,
 			);
@@ -367,7 +364,6 @@
 				AFA76E8624AF13A8007E208E /* HomeView.swift in Sources */,
 				AFA76E8424AF138E007E208E /* HomeViewModel.swift in Sources */,
 				0666DA1F24B9436000EE047A /* DetailFollowerView.swift in Sources */,
-				0666DA0C24B8D89900EE047A /* Constant.swift in Sources */,
 				AFA76E8824AF13B1007E208E /* HomeViewController.swift in Sources */,
 				AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */,
 				0666DA1324B8F21600EE047A /* Utils.swift in Sources */,
