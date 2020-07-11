@@ -23,11 +23,13 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
         // View's properties are also accessible like: layout.titleLabel
         // ....
         
+        //Init title UIViewController
+        self.title = "Followers"
  
         
         //Observer Display data
         followersBehaviorRelay.observeOn(MainScheduler.instance).bind(to: layout.tableView.rx.items(cellIdentifier: ListFollowersTableViewCell.identifier, cellType: ListFollowersTableViewCell.self)) { index, data, myCell in
-            myCell.updateData(follower: self.followersBehaviorRelay.value[index])
+            myCell.bind(viewModel: self.followersBehaviorRelay.value[index])
         }.disposed(by: disposeBag)
         
         //Observer in the bottom list

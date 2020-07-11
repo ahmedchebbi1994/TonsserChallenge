@@ -9,7 +9,7 @@
 import UIKit
 
 struct FollowerViewModel {
-
+    
     var follower: Follower
     
     var displayTextName: String {

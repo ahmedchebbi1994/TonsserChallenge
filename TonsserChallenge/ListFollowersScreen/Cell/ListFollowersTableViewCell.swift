@@ -15,7 +15,7 @@ class ListFollowersTableViewCell: UITableViewCell {
     static let identifier = "ListFollowersTableViewCell"
     let disposeBag = DisposeBag()
     private var animator: UIViewPropertyAnimator?
-
+    
     // MARK: - IBOutlet
     
     
@@ -27,10 +27,10 @@ class ListFollowersTableViewCell: UITableViewCell {
     }()
     
     private lazy var teamIconView: UIView = {
-           let st = UIView()
-           st.translatesAutoresizingMaskIntoConstraints = false
-           return st
-       }()
+        let st = UIView()
+        st.translatesAutoresizingMaskIntoConstraints = false
+        return st
+    }()
     
     private lazy var teamIcon: UIImageView = {
         let img = UIImageView()
@@ -57,14 +57,14 @@ class ListFollowersTableViewCell: UITableViewCell {
         
         return st
     }()
-   
+    
     private lazy var stackViewDescription: UIStackView = {
         let st = UIStackView()
         st.axis = .vertical
         st.distribution = .fillEqually
         st.translatesAutoresizingMaskIntoConstraints = false
         st.spacing = 5
-
+        
         return st
     }()
     
@@ -74,7 +74,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         st.translatesAutoresizingMaskIntoConstraints = false
         return st
     }()
- 
+    
     private lazy var profileIcon: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
@@ -92,23 +92,23 @@ class ListFollowersTableViewCell: UITableViewCell {
         st.translatesAutoresizingMaskIntoConstraints = false
         st.spacing = 15
         st.customize(backgroundColor: .white, radiusSize: 10)
-
+        
         return st
     }()
-     
+    
     
     // MARK: - Init constructor
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
         setupConstraints()
-
+        
     }
     
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
         self.profileIcon.addCircleGradiendBorder(4)
-
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -136,11 +136,11 @@ class ListFollowersTableViewCell: UITableViewCell {
         
         self.contentView.addSubview(stackViewMainView)
         
-
-
+        
+        
         
         self.contentView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
-
+        
     }
     
     // MARK: - Setting Constraints
@@ -155,13 +155,13 @@ class ListFollowersTableViewCell: UITableViewCell {
         teamIcon.leadingAnchor.constraint(equalTo: teamIconView.leadingAnchor,constant: 2).isActive = true
         teamIcon.trailingAnchor.constraint(equalTo: teamIconView.trailingAnchor,constant: -2).isActive = true
         teamIcon.bottomAnchor.constraint(equalTo: teamIconView.bottomAnchor,constant: -2).isActive = true
-
+        
         
         profileIcon.topAnchor.constraint(equalTo: profileIconView.topAnchor,constant: 5).isActive = true
         profileIcon.leadingAnchor.constraint(equalTo: profileIconView.leadingAnchor,constant: 5).isActive = true
         profileIcon.trailingAnchor.constraint(equalTo: profileIconView.trailingAnchor,constant: -5).isActive = true
         profileIcon.bottomAnchor.constraint(equalTo: profileIconView.bottomAnchor,constant: -5).isActive = true
-
+        
         
         stackViewMainView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 10).isActive = true
         stackViewMainView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10).isActive = true
@@ -170,15 +170,12 @@ class ListFollowersTableViewCell: UITableViewCell {
         
     }
     
-    func updateData(follower: FollowerViewModel){
+    func bind(viewModel: FollowerViewModel){
         
-        self.nameTxt.text = follower.displayTextName
-        self.teamNameTxt.text = follower.displayTxtTeamName
+        self.nameTxt.text = viewModel.displayTextName
+        self.teamNameTxt.text = viewModel.displayTxtTeamName
         
-        
-        //self.cancellable = loadImage(for: follower).sink { [unowned self] image in self.showImage(image: image) }
-
-        if let url = URL(string: "\(follower.displayTxtUrlProfilePicture)?width=150"){
+        if let url = URL(string: "\(viewModel.displayTxtUrlProfilePicture)?width=150"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
                 if err == nil {
                     DispatchQueue.main.async {
@@ -188,8 +185,8 @@ class ListFollowersTableViewCell: UITableViewCell {
                 }
             }
         }
- 
-        if let url = URL(string: "\(follower.displayTxtLogoTeam)"){
+        
+        if let url = URL(string: "\(viewModel.displayTxtLogoTeam)"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
                 if err == nil {
                     DispatchQueue.main.async {
@@ -203,11 +200,11 @@ class ListFollowersTableViewCell: UITableViewCell {
     }
     
     override public func prepareForReuse() {
-           super.prepareForReuse()
-           profileIcon.image = nil
-           profileIcon.alpha = 0.0
-           animator?.stopAnimation(true)
-       }
+        super.prepareForReuse()
+        profileIcon.image = nil
+        profileIcon.alpha = 0.0
+        animator?.stopAnimation(true)
+    }
     
 }
 extension ListFollowersTableViewCell {
