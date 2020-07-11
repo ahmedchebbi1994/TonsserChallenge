@@ -58,5 +58,17 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
         }.disposed(by: disposeBag)
         
         
+        layout.tableView.rx.itemSelected.observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] indexPath in
+            
+            let vm = self?.followersBehaviorRelay.value[indexPath.row]
+            var vc = DetailFollowerViewController()
+            if let vm = vm {
+                vc.bind(toViewModel: vm)
+                self?.navigationController?.pushViewController(vc, animated: true)
+            }
+            
+        }).disposed(by: self.disposeBag)
+        
     }
 }

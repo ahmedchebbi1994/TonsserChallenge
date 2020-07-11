@@ -12,7 +12,6 @@ class ListFollowerView: ReusableUIView {
     
     // MARK: - Properties
     private let padding: CGFloat = 16
-    private var gradientLayer = CAGradientLayer()
 
     // MARK: - IBOutlet
     private(set) lazy var tableView: UITableView = {

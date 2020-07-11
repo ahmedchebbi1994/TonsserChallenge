@@ -20,6 +20,9 @@
 		0666DA1124B8EFEA00EE047A /* ListFollowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */; };
 		0666DA1324B8F21600EE047A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1224B8F21600EE047A /* Utils.swift */; };
 		0666DA1824B9291000EE047A /* FollowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1724B9291000EE047A /* FollowerViewModel.swift */; };
+		0666DA1F24B9436000EE047A /* DetailFollowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1E24B9436000EE047A /* DetailFollowerView.swift */; };
+		0666DA2124B945CA00EE047A /* DetailFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA2024B945CA00EE047A /* DetailFollowerViewController.swift */; };
+		0666DA2324BA43CC00EE047A /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA2224BA43CC00EE047A /* PaddingLabel.swift */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -59,6 +62,9 @@
 		0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersTableViewCell.swift; sourceTree = "<group>"; };
 		0666DA1224B8F21600EE047A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0666DA1724B9291000EE047A /* FollowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewModel.swift; sourceTree = "<group>"; };
+		0666DA1E24B9436000EE047A /* DetailFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFollowerView.swift; sourceTree = "<group>"; };
+		0666DA2024B945CA00EE047A /* DetailFollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFollowerViewController.swift; sourceTree = "<group>"; };
+		0666DA2224BA43CC00EE047A /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 		0666D9FC24B8AF4100EE047A /* ListFollowersScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0666DA1D24B9420A00EE047A /* Details */,
 				0666DA0F24B8EFC500EE047A /* Cell */,
 				0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */,
 				0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */,
@@ -156,6 +163,7 @@
 			children = (
 				0666DA0B24B8D89900EE047A /* Constant.swift */,
 				0666DA1224B8F21600EE047A /* Utils.swift */,
+				0666DA2224BA43CC00EE047A /* PaddingLabel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -167,6 +175,15 @@
 				0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0666DA1D24B9420A00EE047A /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0666DA1E24B9436000EE047A /* DetailFollowerView.swift */,
+				0666DA2024B945CA00EE047A /* DetailFollowerViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		AFA76E4C24AE167B007E208E = {
@@ -349,18 +366,21 @@
 				AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */,
 				AFA76E8624AF13A8007E208E /* HomeView.swift in Sources */,
 				AFA76E8424AF138E007E208E /* HomeViewModel.swift in Sources */,
+				0666DA1F24B9436000EE047A /* DetailFollowerView.swift in Sources */,
 				0666DA0C24B8D89900EE047A /* Constant.swift in Sources */,
 				AFA76E8824AF13B1007E208E /* HomeViewController.swift in Sources */,
 				AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */,
 				0666DA1324B8F21600EE047A /* Utils.swift in Sources */,
 				0666D9FE24B8AF6F00EE047A /* ListFollowerView.swift in Sources */,
 				0666D9F424B894A500EE047A /* ManagerService.swift in Sources */,
+				0666DA2324BA43CC00EE047A /* PaddingLabel.swift in Sources */,
 				AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */,
 				0666DA1124B8EFEA00EE047A /* ListFollowersTableViewCell.swift in Sources */,
 				0666D9FB24B8955600EE047A /* Follower.swift in Sources */,
 				0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */,
 				0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */,
 				0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */,
+				0666DA2124B945CA00EE047A /* DetailFollowerViewController.swift in Sources */,
 				AFA76E7C24AE1749007E208E /* BindableViewController.swift in Sources */,
 				AFA76E8124AE1822007E208E /* ReusableUIView.swift in Sources */,
 				0666DA1824B9291000EE047A /* FollowerViewModel.swift in Sources */,

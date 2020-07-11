@@ -35,7 +35,7 @@ class ListFollowersTableViewCell: UITableViewCell {
     private lazy var teamIcon: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.contentMode = .scaleAspectFill
+        img.contentMode = .scaleToFill
         img.image = #imageLiteral(resourceName: "placeholder")
         img.clipsToBounds = true
         return img
@@ -149,7 +149,7 @@ class ListFollowersTableViewCell: UITableViewCell {
         profileIconView.widthAnchor.constraint(equalToConstant: 80).isActive = true
         profileIconView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         
-        teamIconView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        teamIconView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         
         teamIcon.topAnchor.constraint(equalTo: teamIconView.topAnchor,constant: 2).isActive = true
         teamIcon.leadingAnchor.constraint(equalTo: teamIconView.leadingAnchor,constant: 2).isActive = true
@@ -173,7 +173,7 @@ class ListFollowersTableViewCell: UITableViewCell {
     func bind(viewModel: FollowerViewModel){
         
         self.nameTxt.text = viewModel.displayTextName
-        self.teamNameTxt.text = viewModel.displayTxtTeamName
+        self.teamNameTxt.text = viewModel.displayTxtClubName
         
         if let url = URL(string: "\(viewModel.displayTxtUrlProfilePicture)?width=150"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
@@ -186,7 +186,7 @@ class ListFollowersTableViewCell: UITableViewCell {
             }
         }
         
-        if let url = URL(string: "\(viewModel.displayTxtLogoTeam)"){
+        if let url = URL(string: "\(viewModel.displayTxtLogoClub)"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
                 if err == nil {
                     DispatchQueue.main.async {

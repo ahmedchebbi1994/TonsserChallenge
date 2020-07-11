@@ -16,6 +16,14 @@ struct FollowerViewModel {
         return follower.name?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
     }
     
+    var displayTextFistName: String {
+        return follower.firstname?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+    }
+    
+    var displayTextLastName: String {
+        return follower.lastname?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+    }
+    
     var displayTxtSlug: String {
         return follower.slug ?? ""
     }
@@ -24,12 +32,44 @@ struct FollowerViewModel {
         return follower.profilePicture ?? ""
     }
     
-    var displayTxtLogoTeam: String {
+    var displayTxtLogoClub: String {
         return follower.team?.club?.logoURL ?? ""
     }
     
-    var displayTxtTeamName: String {
+    var displayTxtClubName: String {
         return follower.club?.name ?? ""
+    }
+    
+    var displayTxtTeamName: String {
+        return follower.team?.name ?? ""
+    }
+    
+    var displayTxtLeagueName: String {
+        return follower.team?.league?.name ?? ""
+    }
+    
+    var displayTxtLeagueNumberPlayer: String {
+        return "\(follower.team?.league?.leaguePlayerCount ?? 0)"
+    }
+    
+    var displayTxtLeagueLevel: String {
+        return follower.team?.league?.level ?? ""
+    }
+    
+    var displayTxtSeasonStart: String {
+        return follower.team?.season?.start ?? ""
+    }
+    
+    var displayTxtSeasonEnd: String {
+        return follower.team?.season?.end ?? ""
+    }
+    
+    var displayTxtPositionCode: String {
+        return follower.primaryPosition?.abbreviation?.uppercased() ?? ""
+    }
+    
+    var displayTxtPositionName: String {
+        return follower.primaryPosition?.name ?? ""
     }
     
     init(follower: Follower) {
