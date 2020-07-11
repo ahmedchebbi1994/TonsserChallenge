@@ -110,6 +110,8 @@ extension UIViewController {
     public func startIndicatingActivity() {
         DispatchQueue.main.async {
             self.view.addSubview(self.indicator)
+            //Constrain Animation
+            self.indicator.center = self.view.center
             self.indicator.startAnimating()
         }
     }

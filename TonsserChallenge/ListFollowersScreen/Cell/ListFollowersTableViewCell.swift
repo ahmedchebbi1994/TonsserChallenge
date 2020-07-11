@@ -215,6 +215,7 @@ extension ListFollowersTableViewCell {
     private func showImage(image: UIImage?) {
         profileIcon.alpha = 0.0
         animator?.stopAnimation(false)
+        animator?.finishAnimation(at: .current)
         profileIcon.image = image
         animator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, options: .curveLinear, animations: {
             self.profileIcon.alpha = 1.0
