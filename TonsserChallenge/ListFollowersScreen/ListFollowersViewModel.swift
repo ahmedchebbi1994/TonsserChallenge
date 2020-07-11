@@ -12,7 +12,7 @@ import RxRelay
 struct ListFollowersViewModel {
 
     private let followersService : FollowersServiceProtocol
-    private let resultsSubject = BehaviorRelay<[Follower]>(value: [])
+    private let resultsSubject = BehaviorRelay<[FollowerViewModel]>(value: [])
     let followers : PublishSubject<[Follower]> = PublishSubject()
 
     
@@ -20,7 +20,11 @@ struct ListFollowersViewModel {
         self.followersService = followersService
     }
     
-    public func fetchFollowersViewModels(nextPage: String = "") -> Observable<[Follower]> {
-        return self.followersService.fetchFollowers(nextPage: nextPage).map { ($0.response ?? []) }
+    public func fetchFollowersViewModels(nextPage: String = "") -> Observable<[FollowerViewModel]> {
+        return self.followersService.fetchFollowers(nextPage: nextPage).map {
+            $0.response
+        }.map {
+            ($0?.map { FollowerViewModel(follower: $0) } ?? [])
+        }
     }
 }

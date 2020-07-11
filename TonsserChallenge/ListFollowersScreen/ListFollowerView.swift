@@ -12,19 +12,20 @@ class ListFollowerView: ReusableUIView {
     
     // MARK: - Properties
     private let padding: CGFloat = 16
-    
+    private var gradientLayer = CAGradientLayer()
+
     // MARK: - IBOutlet
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        //tableView.backgroundColor = UIColor(named: Constant.Colors.ViewBackgroundColorView)
+        tableView.backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
         return tableView
     }()
     
     // MARK: - Styling
     override func styleUI() {
-        backgroundColor = .white
+        backgroundColor = UIColor(named: Constant.Colors.backgroundMainView)
     }
     
     // MARK: - Constraints
@@ -49,9 +50,10 @@ class ListFollowerView: ReusableUIView {
     // MARK: - configUI
     override func configUI() {
         // register a defalut cell
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        self.tableView.rowHeight = 55
+        self.tableView.register(ListFollowersTableViewCell.self, forCellReuseIdentifier: ListFollowersTableViewCell.identifier)
+        self.tableView.rowHeight = 100
     }
+    
     
     
 }

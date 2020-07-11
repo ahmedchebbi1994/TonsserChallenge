@@ -15,6 +15,11 @@
 		0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */; };
 		0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */; };
 		0666DA0724B8BC7B00EE047A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0666DA0624B8BC7B00EE047A /* RxCocoa */; };
+		0666DA0C24B8D89900EE047A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA0B24B8D89900EE047A /* Constant.swift */; };
+		0666DA0E24B8EF4500EE047A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0666DA0D24B8EF4500EE047A /* Media.xcassets */; };
+		0666DA1124B8EFEA00EE047A /* ListFollowersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */; };
+		0666DA1324B8F21600EE047A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1224B8F21600EE047A /* Utils.swift */; };
+		0666DA1824B9291000EE047A /* FollowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666DA1724B9291000EE047A /* FollowerViewModel.swift */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -49,6 +54,11 @@
 		0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowerView.swift; sourceTree = "<group>"; };
 		0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewModel.swift; sourceTree = "<group>"; };
 		0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersViewController.swift; sourceTree = "<group>"; };
+		0666DA0B24B8D89900EE047A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0666DA0D24B8EF4500EE047A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFollowersTableViewCell.swift; sourceTree = "<group>"; };
+		0666DA1224B8F21600EE047A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0666DA1724B9291000EE047A /* FollowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewModel.swift; sourceTree = "<group>"; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +136,7 @@
 		0666D9FC24B8AF4100EE047A /* ListFollowersScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0666DA0F24B8EFC500EE047A /* Cell */,
 				0666D9FD24B8AF6F00EE047A /* ListFollowerView.swift */,
 				0666D9FF24B8B15B00EE047A /* ListFollowersViewModel.swift */,
 				0666DA0324B8B32C00EE047A /* ListFollowersViewController.swift */,
@@ -138,6 +149,24 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0666DA0A24B8D88B00EE047A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0666DA0B24B8D89900EE047A /* Constant.swift */,
+				0666DA1224B8F21600EE047A /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0666DA0F24B8EFC500EE047A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0666DA1724B9291000EE047A /* FollowerViewModel.swift */,
+				0666DA1024B8EFEA00EE047A /* ListFollowersTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AFA76E4C24AE167B007E208E = {
@@ -162,6 +191,7 @@
 		AFA76E5724AE167B007E208E /* TonsserChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0666DA0A24B8D88B00EE047A /* Utils */,
 				0666D9FC24B8AF4100EE047A /* ListFollowersScreen */,
 				AFA76E7A24AE1708007E208E /* Base */,
 				0666D9F024B8940A00EE047A /* Networks */,
@@ -173,6 +203,7 @@
 				AFA76E6124AE167C007E208E /* Assets.xcassets */,
 				AFA76E6324AE167C007E208E /* LaunchScreen.storyboard */,
 				AFA76E6624AE167C007E208E /* Info.plist */,
+				0666DA0D24B8EF4500EE047A /* Media.xcassets */,
 			);
 			path = TonsserChallenge;
 			sourceTree = "<group>";
@@ -296,6 +327,7 @@
 			files = (
 				AFA76E6524AE167C007E208E /* LaunchScreen.storyboard in Resources */,
 				AFA76E6224AE167C007E208E /* Assets.xcassets in Resources */,
+				0666DA0E24B8EF4500EE047A /* Media.xcassets in Resources */,
 				AFA76E6024AE167B007E208E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,17 +349,21 @@
 				AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */,
 				AFA76E8624AF13A8007E208E /* HomeView.swift in Sources */,
 				AFA76E8424AF138E007E208E /* HomeViewModel.swift in Sources */,
+				0666DA0C24B8D89900EE047A /* Constant.swift in Sources */,
 				AFA76E8824AF13B1007E208E /* HomeViewController.swift in Sources */,
 				AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */,
+				0666DA1324B8F21600EE047A /* Utils.swift in Sources */,
 				0666D9FE24B8AF6F00EE047A /* ListFollowerView.swift in Sources */,
 				0666D9F424B894A500EE047A /* ManagerService.swift in Sources */,
 				AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */,
+				0666DA1124B8EFEA00EE047A /* ListFollowersTableViewCell.swift in Sources */,
 				0666D9FB24B8955600EE047A /* Follower.swift in Sources */,
 				0666D9F824B894FF00EE047A /* ResponseFollowers.swift in Sources */,
 				0666DA0424B8B32C00EE047A /* ListFollowersViewController.swift in Sources */,
 				0666DA0024B8B15B00EE047A /* ListFollowersViewModel.swift in Sources */,
 				AFA76E7C24AE1749007E208E /* BindableViewController.swift in Sources */,
 				AFA76E8124AE1822007E208E /* ReusableUIView.swift in Sources */,
+				0666DA1824B9291000EE047A /* FollowerViewModel.swift in Sources */,
 				0666D9F224B8941C00EE047A /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QJFHWAA62;
+				DEVELOPMENT_TEAM = BDQHL9RP8G;
 				INFOPLIST_FILE = TonsserChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QJFHWAA62;
+				DEVELOPMENT_TEAM = BDQHL9RP8G;
 				INFOPLIST_FILE = TonsserChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
