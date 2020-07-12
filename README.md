@@ -16,7 +16,7 @@
 ##  Dark Mode
 
 <p align="center">
-  <img src="https://gitlab.com/elchebbi.ahmed/test-modulotech/-/raw/master/ScreenShot/followers_screen_dark.png" width="200"  width="100">
-  <img src="https://gitlab.com/elchebbi.ahmed/test-modulotech/-/raw/master/ScreenShot/detail_follower_screen_dark_1.png" width="200"  width="100">
-  <img src="https://gitlab.com/elchebbi.ahmed/test-modulotech/-/raw/master/ScreenShot/detail_follower_screen_dark_2.png" width="200"  width="100">
+  <img src="https://raw.githubusercontent.com/ahmedchebbi1994/TonsserChallenge/master/TonsserChallenge/ScreenShots/followers_screen_dark.png" width="200"  width="100">
+  <img src="https://raw.githubusercontent.com/ahmedchebbi1994/TonsserChallenge/master/TonsserChallenge/ScreenShots/detail_follower_screen_dark_1.png" width="200"  width="100">
+  <img src="https://raw.githubusercontent.com/ahmedchebbi1994/TonsserChallenge/master/TonsserChallenge/ScreenShots/detail_follower_screen_dark_2.png" width="200"  width="100">
 </p>
