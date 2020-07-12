@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import Combine
 class ListFollowersTableViewCell: UITableViewCell {
     
     // MARK: - Property

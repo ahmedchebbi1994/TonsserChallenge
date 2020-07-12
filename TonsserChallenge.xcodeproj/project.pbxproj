@@ -218,9 +218,9 @@
 				AFA76E5C24AE167B007E208E /* ViewController.swift */,
 				AFA76E5E24AE167B007E208E /* Main.storyboard */,
 				AFA76E6124AE167C007E208E /* Assets.xcassets */,
+				0666DA0D24B8EF4500EE047A /* Media.xcassets */,
 				AFA76E6324AE167C007E208E /* LaunchScreen.storyboard */,
 				AFA76E6624AE167C007E208E /* Info.plist */,
-				0666DA0D24B8EF4500EE047A /* Media.xcassets */,
 			);
 			path = TonsserChallenge;
 			sourceTree = "<group>";
