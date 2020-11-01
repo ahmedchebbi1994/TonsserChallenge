@@ -10,8 +10,6 @@ import UIKit
 
 class ListFollowerView: ReusableUIView {
     
-    // MARK: - Properties
-    private let padding: CGFloat = 16
     
     // MARK: - IBOutlet
     private(set) lazy var tableView: UITableView = {

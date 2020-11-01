@@ -9,17 +9,17 @@
 import UIKit
 import RxSwift
 
-public protocol FollowersServiceProtocol {
+protocol FollowersServiceProtocol {
     func fetchFollowers(nextPage: String) -> Observable<ResponseFollowers>
 }
 
-public class ManagerService: ApiService, FollowersServiceProtocol {
+class ManagerService: ApiService, FollowersServiceProtocol {
     
-    public override init() {
+    override init() {
         super.init()
     }
     
-    public func fetchFollowers(nextPage: String = "") -> Observable<ResponseFollowers>{
+    func fetchFollowers(nextPage: String = "") -> Observable<ResponseFollowers>{
         
         return Observable.create { (observer) -> Disposable in
             var urlStr: String = ""

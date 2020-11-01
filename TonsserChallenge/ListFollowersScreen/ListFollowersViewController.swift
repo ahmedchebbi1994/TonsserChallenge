@@ -18,15 +18,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
     // MARK: - Bind View Model
     
     func bindViewModel() { // Here we glue the view model and the view together
-        // .....
-        // View Model's properties are accessible like: viewModel.title
-        // View's properties are also accessible like: layout.titleLabel
-        // ....
-        
-        //Init title UIViewController
         self.title = "Followers"
-        
-        
         //Observer Display data
         followersBehaviorRelay.observeOn(MainScheduler.instance).bind(to: layout.tableView.rx.items(cellIdentifier: ListFollowersTableViewCell.identifier, cellType: ListFollowersTableViewCell.self)) { index, data, myCell in
             myCell.bind(viewModel: self.followersBehaviorRelay.value[index])
@@ -46,7 +38,7 @@ class ListFollowersViewController: BindableViewController<ListFollowerView, List
                     
                     var data = self.followersBehaviorRelay.value
                     self.refresh = false
-                    self.viewModel.fetchFollowersViewModels(nextPage: data.last?.displayTxtSlug ?? "").subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background)).subscribe(onNext: { (followers) in
+                    self.viewModel.fetchFollowersViewModels(nextPage: data.last?.follower.slug ?? "").subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background)).subscribe(onNext: { (followers) in
                         self.refresh = true
                         data.append(contentsOf: followers)
                         self.followersBehaviorRelay.accept(data)

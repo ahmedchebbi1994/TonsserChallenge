@@ -187,9 +187,14 @@ class ListFollowersTableViewCell: UITableViewCell {
         
     }
     
-    override public func prepareForReuse() {
+    override func prepareForReuse() {
         super.prepareForReuse()
         profileIcon.image = nil
+        nameTxt.text = nil
+        teamIcon.image = nil
+        teamNameTxt.text = nil
+        profileIcon.image = nil
+        
         profileIcon.alpha = 0.0
         animator?.stopAnimation(true)
     }

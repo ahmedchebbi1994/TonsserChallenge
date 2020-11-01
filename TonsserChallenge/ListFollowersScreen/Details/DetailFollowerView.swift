@@ -209,8 +209,6 @@ class DetailFollowerView: ReusableUIView {
     }()
     
     
-    
-    
     // MARK: - IBOutlet Position
     
     private(set) lazy var positionTitleTxt: UILabel = {

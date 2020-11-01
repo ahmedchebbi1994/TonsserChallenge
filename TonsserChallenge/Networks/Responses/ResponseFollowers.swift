@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct ResponseFollowers: Codable {
+struct ResponseFollowers: Codable {
     let response: [Follower]?
 }

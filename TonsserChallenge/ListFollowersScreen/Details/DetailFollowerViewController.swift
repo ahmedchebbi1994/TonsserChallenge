@@ -19,11 +19,11 @@ class DetailFollowerViewController: BindableViewController<DetailFollowerView, F
         // View's properties are also accessible like: layout.titleLabel
         // ....
         
-        self.title = viewModel.displayTextName
+        self.title = viewModel.follower.name ?? ""
         
         
-        self.layout.nameTxt.text = "\(viewModel.displayTextFistName) \(viewModel.displayTextLastName)"
-        if let url = URL(string: "\(viewModel.displayTxtUrlProfilePicture)?width=150"){
+        self.layout.nameTxt.text = "\(viewModel.follower.firstname ?? "") \(viewModel.follower.lastname ?? "")"
+        if let url = URL(string: "\(viewModel.follower.profilePicture ?? "")?width=150"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
                 if err == nil {
                     DispatchQueue.main.async {
@@ -34,8 +34,8 @@ class DetailFollowerViewController: BindableViewController<DetailFollowerView, F
             }
         }
         
-        self.layout.clubNameTxt.text = self.viewModel.displayTxtClubName
-        if let url = URL(string: "\(viewModel.displayTxtLogoClub)"){
+        self.layout.clubNameTxt.text = self.viewModel.follower.club?.name ?? ""
+        if let url = URL(string: "\(viewModel.follower.club?.logoURL ?? "")"){
             MTAPIClient.downloadImage(url: url) { (img, err) in
                 if err == nil {
                     DispatchQueue.main.async {
@@ -45,7 +45,7 @@ class DetailFollowerViewController: BindableViewController<DetailFollowerView, F
             }
         }
         
-        self.layout.teamNameTxt.text = self.viewModel.displayTxtTeamName        
+        self.layout.teamNameTxt.text = self.viewModel.displayTxtTeamName
         if  self.viewModel.displayTxtLeagueName.isEmpty == false{
             self.layout.teamLeagueNameTxt.text = "\(self.layout.teamLeagueNameTxt.text ?? "") \(self.viewModel.displayTxtLeagueName)"
         } else {

@@ -13,14 +13,14 @@ struct ListFollowersViewModel {
     
     private let followersService : FollowersServiceProtocol
     private let resultsSubject = BehaviorRelay<[FollowerViewModel]>(value: [])
-    let followers : PublishSubject<[Follower]> = PublishSubject()
+    private let followers : PublishSubject<[Follower]> = PublishSubject()
     
     
     init(followersService: FollowersServiceProtocol = ManagerService()) {
         self.followersService = followersService
     }
     
-    public func fetchFollowersViewModels(nextPage: String = "") -> Observable<[FollowerViewModel]> {
+    func fetchFollowersViewModels(nextPage: String = "") -> Observable<[FollowerViewModel]> {
         return self.followersService.fetchFollowers(nextPage: nextPage).map {
             $0.response
         }.map {
