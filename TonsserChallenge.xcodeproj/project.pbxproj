@@ -29,6 +29,7 @@
 		0666DA3424BB076900EE047A /* detail_follower_screen_dark_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0666DA2E24BB076900EE047A /* detail_follower_screen_dark_1.png */; };
 		0666DA3524BB076900EE047A /* detail_follower_screen_dark_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0666DA2F24BB076900EE047A /* detail_follower_screen_dark_2.png */; };
 		0666DA3624BB076900EE047A /* followers_screen_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0666DA3024BB076900EE047A /* followers_screen_dark.png */; };
+		06A803F5254F16A500F84456 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 06A803F4254F16A500F84456 /* README.md */; };
 		AFA76E5924AE167B007E208E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5824AE167B007E208E /* AppDelegate.swift */; };
 		AFA76E5B24AE167B007E208E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5A24AE167B007E208E /* SceneDelegate.swift */; };
 		AFA76E5D24AE167B007E208E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA76E5C24AE167B007E208E /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		0666DA2E24BB076900EE047A /* detail_follower_screen_dark_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_follower_screen_dark_1.png; sourceTree = "<group>"; };
 		0666DA2F24BB076900EE047A /* detail_follower_screen_dark_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_follower_screen_dark_2.png; sourceTree = "<group>"; };
 		0666DA3024BB076900EE047A /* followers_screen_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = followers_screen_dark.png; sourceTree = "<group>"; };
+		06A803F4254F16A500F84456 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		AFA76E5524AE167B007E208E /* TonsserChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonsserChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA76E5824AE167B007E208E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFA76E5A24AE167B007E208E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		AFA76E5724AE167B007E208E /* TonsserChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				06A803F4254F16A500F84456 /* README.md */,
 				0666DA2A24BB074E00EE047A /* ScreenShots */,
 				0666DA0A24B8D88B00EE047A /* Utils */,
 				0666D9FC24B8AF4100EE047A /* ListFollowersScreen */,
@@ -377,6 +380,7 @@
 				0666DA3524BB076900EE047A /* detail_follower_screen_dark_2.png in Resources */,
 				0666DA0E24B8EF4500EE047A /* Media.xcassets in Resources */,
 				AFA76E6024AE167B007E208E /* Main.storyboard in Resources */,
+				06A803F5254F16A500F84456 /* README.md in Resources */,
 				0666DA3624BB076900EE047A /* followers_screen_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
